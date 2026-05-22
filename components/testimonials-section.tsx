@@ -10,7 +10,11 @@ const CATEGORIES = [
   'Integrated Solutions',
 ];
 
-export function TestimonialsSection() {
+type Props = {
+  hideHeading?: boolean;
+};
+
+export function TestimonialsSection({ hideHeading }: Props) {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const [revealKey, setRevealKey] = useState(0);
@@ -31,9 +35,13 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-24 px-[6vw]">
       <div className="max-w-[1100px] mx-auto">
-        <div className="inline-flex items-center gap-2.5 text-[0.66rem] tracking-[0.24em] uppercase text-brand font-normal mb-3"><span className="w-7 h-px bg-brand"></span>Testimonials</div>
-        <h2 className="font-heading text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold leading-[1.12] mb-3">Testimonials</h2>
-        <p className="text-muted font-light mb-6">What Our Clients Say</p>
+        {!hideHeading && (
+          <>
+            <div className="inline-flex items-center gap-2.5 text-[0.66rem] tracking-[0.24em] uppercase text-brand font-normal mb-3"><span className="w-7 h-px bg-brand"></span>Testimonials</div>
+            <h2 className="font-heading text-[clamp(1.6rem,3.5vw,2.6rem)] font-semibold leading-[1.12] mb-3">Testimonials</h2>
+            <p className="text-muted font-light mb-6">What Our Clients Say</p>
+          </>
+        )}
 
         <div role="tablist" aria-label="Testimonial Categories" className="flex flex-wrap gap-3 mb-8">
           <button

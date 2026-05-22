@@ -50,7 +50,7 @@ export function Footer() {
             <li><Link href="/#why" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Why Grateful Marketing</Link></li>
             <li><Link href="/#platform" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">AI Platform</Link></li>
             <li><Link href="/privacy-policy" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Privacy Policy</Link></li>
-            <li><a href="mailto:hello@gratefulmarketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</a></li>
+            <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Contact Us</a></li>
           </ul>
         </div>
 
@@ -61,8 +61,13 @@ export function Footer() {
              <li><a href="#" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
              <li><a href="#" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
              <li>
-               <a href="mailto:hello@gratefulmarketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                 hello@gratefulmarketing.com
+               <a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+                 client-services@grateful-marketing.com
+               </a>
+             </li>
+             <li>
+               <a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+                 +1 (226) 332-9712
                </a>
              </li>
              <li>

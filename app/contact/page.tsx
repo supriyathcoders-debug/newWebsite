@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ContactForm } from "@/components/contact-form";
+// Contact form removed per client instructions — we now show direct contact details only
 import { CtaButton } from "@/components/ui/cta-button";
 import { Section } from "@/components/ui/section";
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div>
+    <div className="pt-28">
       <section className="section-fade">
         <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-14 sm:px-6 md:pt-20">
           <p className="inline-flex rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-brand">
@@ -23,9 +23,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Section title="Contact Form">
-        <ContactForm />
-      </Section>
+      {/* Contact details block removed per client request */}
 
       <Section title="Prefer to Talk Live?">
         <div className="flex flex-wrap gap-3">
@@ -34,6 +32,13 @@ export default function ContactPage() {
           <CtaButton href="https://app.growthhub365.com/v2/preview/QAuss4a9CGC8EExSO5WE" variant="secondary">
             See Demo
           </CtaButton>
+        </div>
+      </Section>
+
+      <Section title="Other Ways to Reach Us">
+        <div className="flex flex-col gap-2">
+          <a href="mailto:client-services@grateful-marketing.com" className="text-[0.95rem] text-muted no-underline font-medium hover:text-brand">client-services@grateful-marketing.com</a>
+          <a href="tel:+12263329712" className="text-[0.95rem] text-muted no-underline font-medium hover:text-brand">+1 (226) 332-9712</a>
         </div>
       </Section>
     </div>
