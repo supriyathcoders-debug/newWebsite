@@ -28,13 +28,21 @@ const mono = Outfit({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+//   title: {
+//     default: "Grateful Marketing™ | AI Automation Agency",
+//     template: "%s | Grateful Marketing™",
+//   },
+//   description:
+//     "Premium AI automation agency helping service businesses capture, qualify, and convert more leads with AI revenue systems.",
+// };
 export const metadata: Metadata = {
   title: {
-    default: "Grateful Marketing™ | AI Automation Agency",
+    default: "Grateful Marketing™ | AI Business Consulting Agency",
     template: "%s | Grateful Marketing™",
   },
   description:
-    "Premium AI automation agency helping service businesses capture, qualify, and convert more leads with AI revenue systems.",
+    "AI Business Consulting Agency. We deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, websites and apps.",
 };
 
 export default function RootLayout({
