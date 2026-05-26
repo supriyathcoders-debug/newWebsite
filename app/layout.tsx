@@ -43,6 +43,10 @@ export const metadata: Metadata = {
   },
   description:
     "AI Business Consulting Agency. We deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, websites and apps.",
+    verification: {
+      google: "7r5toPumjGEoNgJWa-8BgoZ_kQOMwgkO3jgxC2DX8jQ",
+
+  },
 };
 
 export default function RootLayout({
