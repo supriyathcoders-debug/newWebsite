@@ -41,11 +41,12 @@ export const metadata: Metadata = {
     default: "Grateful Marketing™ | AI Business Consulting Agency",
     template: "%s | Grateful Marketing™",
   },
-  description:
-    "AI Business Consulting Agency. We deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, websites and apps.",
-    verification: {
-      google: "7r5toPumjGEoNgJWa-8BgoZ_kQOMwgkO3jgxC2DX8jQ",
 
+  description:
+    "Grateful Marketing® - AI Business Consulting, AI Training & Empowerment, and AI Strategy & Deployment. We help businesses embrace AI with integrity, confidence, and purpose. Technology that empowers people. Growth that lasts. We also deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, AI automation, and AI website and app development.",
+
+  verification: {
+    google: "7r5toPumjGEoNgJWa-8BgoZ_kQOMwgkO3jgxC2DX8jQ",
   },
 };
 
