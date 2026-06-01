@@ -45,6 +45,12 @@ export const metadata: Metadata = {
   description:
     "Grateful Marketing® - AI Business Consulting, AI Training & Empowerment, and AI Strategy & Deployment. We help businesses embrace AI with integrity, confidence, and purpose. Technology that empowers people. Growth that lasts. We also deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, AI automation, and AI website and app development.",
 
+
+  openGraph: {
+    title: "Grateful Marketing™ | AI Business Consulting Agency",
+    description:
+      "Grateful Marketing® - AI Business Consulting, AI Training & Empowerment, and AI Strategy & Deployment. We help businesses embrace AI with integrity, confidence, and purpose. Technology that empowers people. Growth that lasts. We also deploy AI voice agents, AI chatbots, AI content creation, AI agents/employees, AI automation, and AI website and app development.",
+  },
   verification: {
     google: "7r5toPumjGEoNgJWa-8BgoZ_kQOMwgkO3jgxC2DX8jQ",
   },
