@@ -10,20 +10,21 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] flex items-center section-shell pt-28 pb-24 overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center overflow-hidden"
     >
-      {/* Full-width background per visual map */}
+      {/* Full-bleed background — edge to edge, full viewport height */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <img
           src={IMAGES.heroGoldSilhouette}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover object-[center_20%] lg:object-[70%_center]"
+          className="absolute inset-0 h-full w-full object-cover object-[center_15%] sm:object-[60%_center] lg:object-[68%_center] scale-[1.02]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/97 via-[#23004c]/88 to-[#23004c]/55 lg:to-[#23004c]/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/80 via-transparent to-[#23004c]/30" />
+        {/* Left: text readability · Right: let the hero image show through */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/96 via-[#23004c]/72 to-[#23004c]/15 lg:via-[#23004c]/45 lg:to-[#23004c]/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/75 via-[#23004c]/10 to-[#23004c]/35" />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto">
+      <div className="relative z-10 w-full section-shell pt-28 pb-24 lg:pt-32 lg:pb-28">
         <StaggerReveal className="max-w-[640px]">
           <StaggerItem>
             <Eyebrow className="mb-8">{HERO.eyebrow}</Eyebrow>
