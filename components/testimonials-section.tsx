@@ -7,7 +7,9 @@ import TestimonialCard from "@/components/ui/testimonial-card";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { BrandImage } from "@/components/ui/brand-image";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
+import { IMAGES, TESTIMONIALS } from "@/lib/content/home";
 
 const CATEGORIES = [
   "AI Business Consulting",
@@ -82,13 +84,28 @@ export function TestimonialsSection({ hideHeading }: Props) {
     <section id="testimonials" className="py-28 section-shell bg-brand-soft/20">
       <div className="max-w-[1200px] mx-auto">
         {!hideHeading && (
-          <StaggerReveal className="mb-10">
-            <StaggerItem>
-              <Eyebrow className="mb-4">Testimonials</Eyebrow>
-              <SectionHeading className="mb-3">Testimonials</SectionHeading>
-              <p className="text-muted font-light">What Our Clients Say</p>
-            </StaggerItem>
-          </StaggerReveal>
+          <>
+            <StaggerReveal className="mb-10">
+              <StaggerItem>
+                <BrandImage
+                  src={IMAGES.handsMeetingMinimalist}
+                  alt="The AI partnership — trusted client collaboration"
+                  className="max-w-[900px] mx-auto mb-10"
+                />
+              </StaggerItem>
+            </StaggerReveal>
+            <StaggerReveal className="mb-10 max-w-[720px]">
+              <StaggerItem>
+                <Eyebrow className="mb-4">{TESTIMONIALS.eyebrow}</Eyebrow>
+                <SectionHeading>
+                  {TESTIMONIALS.heading}{" "}
+                  <em className="italic text-brand font-light">
+                    {TESTIMONIALS.headingEm}
+                  </em>
+                </SectionHeading>
+              </StaggerItem>
+            </StaggerReveal>
+          </>
         )}
 
         <ScrollReveal delay={0.1}>

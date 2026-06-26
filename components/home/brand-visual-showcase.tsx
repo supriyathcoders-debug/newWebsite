@@ -6,22 +6,22 @@ import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { IMAGES } from "@/lib/constants";
 
 const SLIDES = [
-  { src: IMAGES.heartGratitude, alt: "The heart of gratitude" },
-  { src: IMAGES.growthWithAi, alt: "Growing with AI" },
-  { src: IMAGES.sparkInnovation, alt: "The spark of innovation" },
-  { src: IMAGES.dataConfidence, alt: "Data-driven confidence" },
-  { src: IMAGES.communityPower, alt: "The power of community" },
+  { src: IMAGES.heartCircuitGratitude, alt: "The heart of gratitude" },
+  { src: IMAGES.innovationAiOpportunity, alt: "The AI opportunity" },
+  { src: IMAGES.heroHumanSpark, alt: "The spark of innovation" },
+  { src: IMAGES.aiPlatformDataConfidence, alt: "Data-driven confidence" },
+  { src: IMAGES.teamCommunityCircle, alt: "The power of community" },
   { src: IMAGES.celebratingWins, alt: "Celebrating wins" },
-  { src: IMAGES.acceleratingGrowth, alt: "Accelerating growth" },
-  { src: IMAGES.gratitudeAlways, alt: "Gratitude always" },
+  { src: IMAGES.clientGrowthTransformation, alt: "Accelerating growth" },
+  { src: IMAGES.agencyProfessionalWoman, alt: "Gratitude always" },
 ] as const;
 
 const STACK = [
   { src: IMAGES.pillarsGratitude, alt: "GRATITUDE pillars" },
-  { src: IMAGES.aiOpportunity, alt: "The AI opportunity" },
-  { src: IMAGES.pathForward, alt: "The path forward" },
-  { src: IMAGES.nextChapter, alt: "Writing the next chapter" },
-  { src: IMAGES.aiPartnership, alt: "The AI partnership" },
+  { src: IMAGES.innovationAiOpportunity, alt: "The AI opportunity" },
+  { src: IMAGES.bridgeMotifStrategy, alt: "The path forward" },
+  { src: IMAGES.writingNextChapter, alt: "Writing the next chapter" },
+  { src: IMAGES.handsMeetingMinimalist, alt: "The AI partnership" },
 ] as const;
 
 /** Image-only showcase — no extra marketing copy added */
