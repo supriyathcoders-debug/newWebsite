@@ -12,6 +12,7 @@ import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { IMAGES, TESTIMONIALS } from "@/lib/content/home";
 
 const CATEGORIES = [
+  "AI Voice Agents",
   "AI Business Consulting",
   "AI Marketing Strategy & Deployment",
   "AI Team Training & Empowerment",
@@ -20,10 +21,13 @@ const CATEGORIES = [
 
 type Props = {
   hideHeading?: boolean;
+  categoryFilter?: string;
 };
 
-export function TestimonialsSection({ hideHeading }: Props) {
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
+  const [activeCategory, setActiveCategory] = useState<string | null>(
+    categoryFilter ?? null,
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
 
@@ -109,6 +113,7 @@ export function TestimonialsSection({ hideHeading }: Props) {
         )}
 
         <ScrollReveal delay={0.1}>
+          {!categoryFilter && (
           <div
             role="tablist"
             aria-label="Testimonial Categories"
@@ -140,10 +145,11 @@ export function TestimonialsSection({ hideHeading }: Props) {
                     : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
                 }`}
               >
-                {c.replace("AI ", "")}
+                {c === "AI Voice Agents" ? "AI Voice Agents" : c.replace("AI ", "")}
               </button>
             ))}
           </div>
+          )}
         </ScrollReveal>
 
         <div className="relative">

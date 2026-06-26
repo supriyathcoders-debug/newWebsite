@@ -112,13 +112,13 @@ export const SERVICES = {
   headingEm: "purpose-driven",
   headingSuffix: "growth.",
   intro:
-    "Every engagement meets you exactly where you are. Whether you are just beginning your AI journey or ready to scale with full deployment and automation, we have the strategic framework to get you there.",
+    "Human First. AI Second. Always. Every engagement starts with your people — your team, your customers, your goals. Whether you're taking your first step into AI or ready to scale what's already working, we bring the strategy. You keep the soul of your business.",
   items: [
     {
       number: "01",
       title: "AI Business Consulting",
       description:
-        "Stop guessing about AI and start leveraging it as your competitive advantage. We audit your current landscape, identify high-value opportunities, and build a clear, actionable AI roadmap tailored to your specific goals and growth stage.",
+        "Your people deserve a strategy built around them — not around the technology. We sit with your team, learn how you actually work, and build a clear AI roadmap that serves your goals and protects what makes you worth choosing.",
       image: IMAGES.heroHumanSpark,
       imageAlt: "The spark of innovation — AI business consulting",
       href: null,
@@ -127,7 +127,7 @@ export const SERVICES = {
       number: "02",
       title: "Marketing Strategy & Deployment",
       description:
-        "Turn your marketing into a predictable revenue engine. From insight to execution, we design, build, and deploy end-to-end AI-powered marketing systems that attract your ideal customers, convert them consistently, and scale your operations intelligently.",
+        "Your customers want to feel understood — not marketed to. We design and deploy end-to-end marketing systems that attract the right people, earn their trust, and convert consistently, with AI doing the heavy lifting so your voice stays unmistakably yours.",
       image: IMAGES.bridgeMotifStrategy,
       imageAlt: "The path forward — marketing strategy and deployment",
       href: null,
@@ -136,7 +136,7 @@ export const SERVICES = {
       number: "03",
       title: "AI Team Training & Empowerment",
       description:
-        "Transform your team's hesitation into capability. Your people are your greatest asset. We design and deliver hands-on AI training programs that empower your team to confidently adopt AI tools, think in systems, and drive measurable results.",
+        "Your people aren't the obstacle — they're the whole point. We designed our training around them first: their worries, their roles, their potential. By the end, they don't just use AI confidently. They lead with it.",
       image: IMAGES.cuppedHandsSpark,
       imageAlt: "Cupped hands holding the spark — AI team training",
       href: null,
@@ -145,7 +145,7 @@ export const SERVICES = {
       number: "04",
       title: "AI Voice Agents",
       description:
-        "24/7 voice automation to turn missed calls into booked opportunities. Capture, qualify, and convert your leads instantly around the clock without scaling your headcount.",
+        "Every missed call is a real person who needed you and didn't reach you. Our voice agents answer every inquiry with genuine warmth — day, night, and weekends — so no one ever feels ignored, and your team focuses on the conversations that truly need a human.",
       image: IMAGES.clientGrowthTransformation,
       imageAlt: "Accelerating growth — AI voice agents",
       href: "/ai-voice-agents",
@@ -159,42 +159,42 @@ export const INDUSTRIES = {
   heading: "Built for organizations",
   headingEm: "ready to lead with trust.",
   intro:
-    "We partner with purpose-driven organizations across highly regulated and trust-dependent sectors. When compliance, privacy, and authentic connection are non-negotiable, we build the intelligent systems that fuel your lasting growth.",
+    "Human First. AI Second. Always. We partner with purpose-driven organizations across highly regulated and trust-dependent sectors — building intelligent systems that keep people at the center.",
   items: [
     {
       title: "B2B & Professional Services",
       description:
-        "Attract better clients and close deals more efficiently. We build AI-powered marketing systems that generate leads and nurture your prospects on autopilot.",
+        "Your best clients chose you because of trust — not a campaign. We build systems around the relationships that drive real revenue, with AI working quietly behind the scenes.",
       icon: "building",
     },
     {
       title: "D2C Brands",
       description:
-        "Scale your brand without losing the human connection your customers love. We build AI-powered systems that personalize at scale while keeping your voice authentic.",
+        "Your customers chose you because you felt real. We make sure growth never changes that — personalizing at scale while keeping your voice unmistakably yours.",
       icon: "sprout",
     },
     {
       title: "Legal",
       description:
-        "Scale your practice without increasing your overhead. We build compliant AI systems that automate intake, nurture leads, and manage client communications while maintaining the highest standards of professional trust.",
+        "Clients come to you in their most vulnerable moments. We build compliant systems that honour that trust, so your team stays focused on what only a lawyer can do.",
       icon: "scale",
     },
     {
       title: "Financial",
       description:
-        "Drive consistent growth in a highly regulated environment. We help financial advisors and firms build authority through intelligent content, automated lead scoring, and precision-targeted outreach.",
+        "Your clients aren't buying a product — they're placing their future in your hands. We help you build genuine authority and earn long-term trust, within every regulatory boundary.",
       icon: "chart",
     },
     {
       title: "Insurance",
       description:
-        "Turn your reputation into a predictable revenue engine. Our AI-powered systems help you capture leads 24/7, nurture prospect relationships, and stay top-of-mind with your existing client base.",
+        "Your clients stay because they feel genuinely looked after. We make sure every new prospect feels the same way — from the very first call to every renewal.",
       icon: "shield",
     },
     {
       title: "Service-Based Businesses",
       description:
-        "Turn your reputation into revenue. We help local specialists and growing service companies build a consistent online presence and generate steady inbound leads.",
+        "Your work is excellent — your clients know it. We make sure the next right client can find you, and keep the phone ringing without adding more to your plate.",
       icon: "wrench",
     },
   ],
