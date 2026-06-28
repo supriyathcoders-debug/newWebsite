@@ -12,16 +12,16 @@ export function HeroSection() {
       id="hero"
       className="relative min-h-[100dvh] flex items-center overflow-hidden"
     >
-      {/* Full-bleed background — edge to edge, full viewport height */}
-      <div className="absolute inset-0 z-0" aria-hidden="true">
+      {/* Full-bleed background — contain on mobile so logo isn't cropped */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-[#23004c]" aria-hidden="true">
         <img
           src={IMAGES.heroGoldSilhouette}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[center_15%] sm:object-[60%_center] lg:object-[68%_center] scale-[1.02]"
+          className="absolute inset-0 h-full w-full object-contain object-center sm:object-cover sm:object-[60%_center] lg:object-[68%_center]"
         />
-        {/* Left: text readability · Right: let the hero image show through */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/96 via-[#23004c]/72 to-[#23004c]/15 lg:via-[#23004c]/45 lg:to-[#23004c]/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/75 via-[#23004c]/10 to-[#23004c]/35" />
+        {/* Left: text readability · lighter on mobile so background logo stays visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/88 via-[#23004c]/55 to-transparent sm:from-[#23004c]/96 sm:via-[#23004c]/72 sm:to-[#23004c]/15 lg:via-[#23004c]/45 lg:to-[#23004c]/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/70 via-transparent to-[#23004c]/20 sm:from-[#23004c]/75 sm:to-[#23004c]/35" />
       </div>
 
       <div className="relative z-10 w-full section-shell pt-28 pb-24 lg:pt-32 lg:pb-28">
