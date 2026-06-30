@@ -289,13 +289,13 @@ export default function AiRevenueAuditPage() {
                         className={`w-full bg-brand-soft border ${errors.includes("role") ? 'border-red-500/50' : 'border-border-subtle'} rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none`}
                         style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}
                       >
-                        <option value="" className="bg-[#0b1825]">Select position...</option>
-                        <option value="Owner / Founder" className="bg-[#0b1825]">Owner / Founder</option>
-                        <option value="CEO / President" className="bg-[#0b1825]">CEO / President</option>
-                        <option value="Marketing Lead" className="bg-[#0b1825]">Marketing Lead</option>
-                        <option value="Operations Manager" className="bg-[#0b1825]">Operations Manager</option>
-                        <option value="Sales Lead" className="bg-[#0b1825]">Sales Lead</option>
-                        <option value="Other" className="bg-[#0b1825]">Other</option>
+                        <option value="">Select position...</option>
+                        <option value="Owner / Founder">Owner / Founder</option>
+                        <option value="CEO / President">CEO / President</option>
+                        <option value="Marketing Lead">Marketing Lead</option>
+                        <option value="Operations Manager">Operations Manager</option>
+                        <option value="Sales Lead">Sales Lead</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                   </div>
@@ -330,12 +330,12 @@ export default function AiRevenueAuditPage() {
                           className="w-full bg-brand-soft border border-border-subtle rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none"
                           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}
                         >
-                          <option value="" className="bg-[#0b1825]">Select team size...</option>
-                          <option className="bg-[#0b1825]">1-5</option>
-                          <option className="bg-[#0b1825]">6-20</option>
-                          <option className="bg-[#0b1825]">21-50</option>
-                          <option className="bg-[#0b1825]">51-200</option>
-                          <option className="bg-[#0b1825]">200+</option>
+                          <option value="">Select team size...</option>
+                          <option>1-5</option>
+                          <option>6-20</option>
+                          <option>21-50</option>
+                          <option>51-200</option>
+                          <option>200+</option>
                         </select>
                       </div>
                       <div className="space-y-2">
@@ -347,28 +347,28 @@ export default function AiRevenueAuditPage() {
                           className="w-full bg-brand-soft border border-border-subtle rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none"
                           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}
                         >
-                          <option value="" className="bg-[#0b1825]">Select revenue range...</option>
-                          <option className="bg-[#0b1825]">Under $100k</option>
-                          <option className="bg-[#0b1825]">$100k-$500k</option>
-                          <option className="bg-[#0b1825]">$500k-$1M</option>
-                          <option className="bg-[#0b1825]">$1M-$5M</option>
-                          <option className="bg-[#0b1825]">$5M+</option>
+                          <option value="">Select revenue range...</option>
+                          <option>Under $100k</option>
+                          <option>$100k-$500k</option>
+                          <option>$500k-$1M</option>
+                          <option>$1M-$5M</option>
+                          <option>$5M+</option>
                         </select>
                       </div>
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-semibold uppercase tracking-wider text-muted">Industry <span className="text-brand">*</span></label>
                       <select name="industry" value={formData.industry} onChange={handleInputChange} className={`w-full bg-brand-soft border ${errors.includes("industry") ? 'border-red-500/50' : 'border-border-subtle'} rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none`} style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}>
-                        <option value="" className="bg-[#0b1825]">Select industry...</option>
-                        <option className="bg-[#0b1825]">Health & Wellness</option>
-                        <option className="bg-[#0b1825]">Personal Services (Salon/Spa)</option>
-                        <option className="bg-[#0b1825]">Pet Care & Services</option>
-                        <option className="bg-[#0b1825]">Professional Services (Legal/Consulting)</option>
-                        <option className="bg-[#0b1825]">Home Services (Trades)</option>
-                        <option className="bg-[#0b1825]">Retail / E-commerce / DTC</option>
-                        <option className="bg-[#0b1825]">B2B / SaaS / Tech</option>
-                        <option className="bg-[#0b1825]">Non-Profit</option>
-                        <option className="bg-[#0b1825]">Other</option>
+                        <option value="">Select industry...</option>
+                        <option>Health & Wellness</option>
+                        <option>Personal Services (Salon/Spa)</option>
+                        <option>Pet Care & Services</option>
+                        <option>Professional Services (Legal/Consulting)</option>
+                        <option>Home Services (Trades)</option>
+                        <option>Retail / E-commerce / DTC</option>
+                        <option>B2B / SaaS / Tech</option>
+                        <option>Non-Profit</option>
+                        <option>Other</option>
                       </select>
                     </div>
                   </div>
@@ -400,13 +400,13 @@ export default function AiRevenueAuditPage() {
                     <div className="space-y-2">
                       <label className="text-xs font-semibold uppercase tracking-wider text-muted">Your #1 Goal <span className="text-brand">*</span></label>
                       <select name="primaryGoal" value={formData.primaryGoal} onChange={handleInputChange} className={`w-full bg-brand-soft border ${errors.includes("primaryGoal") ? 'border-red-500/50' : 'border-border-subtle'} rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none`} style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}>
-                        <option value="" className="bg-[#0b1825]">Select your top priority...</option>
-                        <option className="bg-[#0b1825]">Increase revenue</option>
-                        <option className="bg-[#0b1825]">Grow client base</option>
-                        <option className="bg-[#0b1825]">Improve customer experience</option>
-                        <option className="bg-[#0b1825]">Free up team time</option>
-                        <option className="bg-[#0b1825]">Build stronger brand presence</option>
-                        <option className="bg-[#0b1825]">Better understand marketing ROI</option>
+                        <option value="">Select your top priority...</option>
+                        <option>Increase revenue</option>
+                        <option>Grow client base</option>
+                        <option>Improve customer experience</option>
+                        <option>Free up team time</option>
+                        <option>Build stronger brand presence</option>
+                        <option>Better understand marketing ROI</option>
                       </select>
                     </div>
                   </div>
@@ -459,11 +459,11 @@ export default function AiRevenueAuditPage() {
                     <div className="space-y-2">
                       <label className="text-xs font-semibold uppercase tracking-wider text-muted">Implementation Timeline <span className="text-brand">*</span></label>
                       <select name="timeline" value={formData.timeline} onChange={handleInputChange} className={`w-full bg-brand-soft border ${errors.includes("timeline") ? 'border-red-500/50' : 'border-border-subtle'} rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none`} style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}>
-                        <option value="" className="bg-[#0b1825]">Select timeframe...</option>
-                        <option className="bg-[#0b1825]">Immediately (within 30 days)</option>
-                        <option className="bg-[#0b1825]">Soon (1–3 months)</option>
-                        <option className="bg-[#0b1825]">Planning ahead (3–6 months)</option>
-                        <option className="bg-[#0b1825]">Just exploring</option>
+                        <option value="">Select timeframe...</option>
+                        <option>Immediately (within 30 days)</option>
+                        <option>Soon (1–3 months)</option>
+                        <option>Planning ahead (3–6 months)</option>
+                        <option>Just exploring</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -480,11 +480,11 @@ export default function AiRevenueAuditPage() {
                           className="w-full bg-brand-soft border border-border-subtle rounded-xl px-5 py-4 focus:outline-none focus:border-brand transition-colors text-foreground appearance-none"
                           style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c8a951' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1.25rem center', backgroundSize: '1.25rem' }}
                         >
-                          <option value="" className="bg-[#0b1825]">Select budget range...</option>
-                          <option className="bg-[#0b1825]">Under $1,000 / month</option>
-                          <option className="bg-[#0b1825]">$1,000-$3,000 / month</option>
-                          <option className="bg-[#0b1825]">$3,000-$10,000 / month</option>
-                          <option className="bg-[#0b1825]">$10,000+ / month</option>
+                          <option value="">Select budget range...</option>
+                          <option>Under $1,000 / month</option>
+                          <option>$1,000-$3,000 / month</option>
+                          <option>$3,000-$10,000 / month</option>
+                          <option>$10,000+ / month</option>
                         </select>
                       </div>
                       <div className="space-y-2">
@@ -513,14 +513,14 @@ export default function AiRevenueAuditPage() {
                 id="audit-form-feedback"
                 className={
                   errors.length > 0
-                    ? "mt-8 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-200"
+                    ? "mt-8 rounded-xl border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-700"
                     : "sr-only"
                 }
                 aria-live="polite"
               >
                 {errors.length > 0 ? (
                   <>
-                    <p className="font-semibold text-red-100">Please complete the following to continue:</p>
+                    <p className="font-semibold text-red-800">Please complete the following to continue:</p>
                     <ul className="mt-2 list-disc pl-5 leading-relaxed">
                       {errors.map((key) => (
                         <li key={key}>{fieldLabel[key] ?? key}</li>
@@ -530,7 +530,7 @@ export default function AiRevenueAuditPage() {
                 ) : null}
               </div>
               {submitError ? (
-                <p className="mt-6 text-sm text-red-300 leading-relaxed" role="alert">
+                <p className="mt-6 text-sm text-red-600 leading-relaxed" role="alert">
                   {submitError}
                 </p>
               ) : null}

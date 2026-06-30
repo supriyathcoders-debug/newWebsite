@@ -9,6 +9,7 @@ type Props = {
   className?: string;
   size?: "sm" | "md" | "lg";
   animate?: "float" | "fade" | "scale";
+  aspectRatio?: string;
 };
 
 const sizeClasses = {
@@ -23,6 +24,7 @@ export function AnimatedBrandImage({
   className,
   size = "md",
   animate = "float",
+  aspectRatio = "3/2",
 }: Props) {
   const reduceMotion = useReducedMotion();
 
@@ -42,19 +44,21 @@ export function AnimatedBrandImage({
         scale: { duration: 1.1, ease: [0.16, 1, 0.3, 1] },
       }}
       className={cn(
-        "relative mx-auto overflow-hidden border border-brand/20 bg-[#0b0b2b] shadow-[0_16px_48px_rgba(0,0,0,0.3)]",
+        "relative mx-auto overflow-hidden rounded-sm border border-brand/20 bg-[#fdfbf7] shadow-[0_16px_48px_rgba(11,15,25,0.10)]",
         sizeClasses[size],
         className,
       )}
     >
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent z-10" />
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-auto block object-contain"
-        loading="lazy"
-        decoding="async"
-      />
+      <div className="w-full" style={{ aspectRatio }}>
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full object-cover block"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </motion.div>
   );
 }

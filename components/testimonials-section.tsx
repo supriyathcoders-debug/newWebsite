@@ -85,23 +85,14 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
       : visible;
 
   return (
-    <section id="testimonials" className="py-28 section-shell bg-brand-soft/20">
+    <section id="testimonials" className="py-28 section-shell bg-[#f8fafc]">
       <div className="max-w-[1200px] mx-auto">
         {!hideHeading && (
           <>
-            <StaggerReveal className="mb-10">
-              <StaggerItem>
-                <BrandImage
-                  src={IMAGES.handsMeetingMinimalist}
-                  alt="The AI partnership — trusted client collaboration"
-                  className="max-w-[900px] mx-auto mb-10"
-                />
-              </StaggerItem>
-            </StaggerReveal>
-            <StaggerReveal className="mb-10 max-w-[720px]">
+            <StaggerReveal className="mb-12 max-w-[720px]">
               <StaggerItem>
                 <Eyebrow className="mb-4">{TESTIMONIALS.eyebrow}</Eyebrow>
-                <SectionHeading>
+                <SectionHeading className="text-[#0b0f19]">
                   {TESTIMONIALS.heading}{" "}
                   <em className="italic text-brand font-light">
                     {TESTIMONIALS.headingEm}
@@ -112,46 +103,48 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
           </>
         )}
 
+        {/* Category filter tabs */}
         <ScrollReveal delay={0.1}>
           {!categoryFilter && (
-          <div
-            role="tablist"
-            aria-label="Testimonial Categories"
-            className="flex flex-wrap gap-2 mb-10"
-          >
-            <button
-              role="tab"
-              aria-selected={activeCategory === null}
-              onClick={() => setActiveCategory(null)}
-              className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                activeCategory === null
-                  ? "bg-brand text-background border-brand"
-                  : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
-              }`}
+            <div
+              role="tablist"
+              aria-label="Testimonial Categories"
+              className="flex flex-wrap gap-2 mb-12"
             >
-              All
-            </button>
-            {CATEGORIES.map((c) => (
               <button
-                key={c}
                 role="tab"
-                aria-selected={activeCategory === c}
-                onClick={() =>
-                  setActiveCategory((s) => (s === c ? null : c))
-                }
-                className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
-                  activeCategory === c
-                    ? "bg-brand text-background border-brand"
-                    : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
+                aria-selected={activeCategory === null}
+                onClick={() => setActiveCategory(null)}
+                className={`text-[0.7rem] tracking-[0.1em] uppercase px-5 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
+                  activeCategory === null
+                    ? "bg-brand text-white border-brand"
+                    : "bg-transparent text-slate-500 border-black/10 hover:border-brand/40 hover:text-brand"
                 }`}
               >
-                {c === "AI Voice Agents" ? "AI Voice Agents" : c.replace("AI ", "")}
+                All
               </button>
-            ))}
-          </div>
+              {CATEGORIES.map((c) => (
+                <button
+                  key={c}
+                  role="tab"
+                  aria-selected={activeCategory === c}
+                  onClick={() =>
+                    setActiveCategory((s) => (s === c ? null : c))
+                  }
+                  className={`text-[0.7rem] tracking-[0.1em] uppercase px-5 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
+                    activeCategory === c
+                      ? "bg-brand text-white border-brand"
+                      : "bg-transparent text-slate-500 border-black/10 hover:border-brand/40 hover:text-brand"
+                  }`}
+                >
+                  {c === "AI Voice Agents" ? "AI Voice Agents" : c.replace("AI ", "")}
+                </button>
+              ))}
+            </div>
           )}
         </ScrollReveal>
 
+        {/* Carousel */}
         <div className="relative">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
@@ -180,7 +173,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                     className={`h-1 transition-all duration-300 ${
                       i === currentIndex
                         ? "w-8 bg-brand"
-                        : "w-4 bg-border-subtle hover:bg-brand/40"
+                        : "w-4 bg-black/10 hover:bg-brand/40"
                     }`}
                   />
                 ))}
@@ -190,7 +183,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 <button
                   onClick={prev}
                   aria-label="Previous testimonials"
-                  className="w-11 h-11 border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10"
+                  className="w-11 h-11 border border-black/10 flex items-center justify-center text-slate-400 transition-all hover:border-brand hover:text-brand hover:bg-brand/5"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="m15 18-6-6 6-6" />
@@ -199,7 +192,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 <button
                   onClick={next}
                   aria-label="Next testimonials"
-                  className="w-11 h-11 border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10"
+                  className="w-11 h-11 border border-black/10 flex items-center justify-center text-slate-400 transition-all hover:border-brand hover:text-brand hover:bg-brand/5"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="m9 18 6-6-6-6" />

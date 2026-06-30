@@ -5,16 +5,17 @@ import { motion } from "framer-motion";
 const container = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+    transition: { staggerChildren: 0.18, delayChildren: 0.08 },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30, scale: 0.97 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+    scale: 1,
+    transition: { duration: 0.9, ease: [0.19, 1, 0.22, 1] as const },
   },
 };
 

@@ -24,7 +24,6 @@ const STACK = [
   { src: IMAGES.handsMeetingMinimalist, alt: "The AI partnership" },
 ] as const;
 
-/** Image-only showcase — no extra marketing copy added */
 export function BrandVisualShowcase() {
   const [active, setActive] = useState(0);
   const [stackTop, setStackTop] = useState(0);
@@ -50,7 +49,8 @@ export function BrandVisualShowcase() {
       <StaggerReveal className="max-w-[900px] mx-auto">
         <StaggerItem>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="relative h-[220px] max-w-[280px] mx-auto md:mx-0 w-full">
+            {/* Stacked cards */}
+            <div className="relative w-full max-w-[320px] sm:max-w-[280px] mx-auto md:mx-0" style={{ aspectRatio: "3/2" }}>
               {[0, 1, 2].map((offset) => {
                 const idx = (stackTop + offset) % STACK.length;
                 const card = STACK[idx];
@@ -68,20 +68,21 @@ export function BrandVisualShowcase() {
                       zIndex: depth,
                     }}
                     transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute inset-x-0 top-0 overflow-hidden border border-brand/20 bg-[#0b0b2b] shadow-lg"
+                    className="absolute inset-0 overflow-hidden rounded-sm border border-brand/20 bg-[#fdfbf7] shadow-lg"
                   >
                     <img
                       src={card.src}
                       alt={card.alt}
-                      className="w-full h-[160px] object-contain p-2"
+                      className="w-full h-full object-cover"
                     />
                   </motion.div>
                 );
               })}
             </div>
 
-            <div className="relative max-w-[280px] mx-auto md:ml-auto w-full">
-              <div className="relative overflow-hidden border border-brand/20 bg-[#0b0b2b] h-[220px]">
+            {/* Slideshow */}
+            <div className="relative w-full max-w-[320px] sm:max-w-[280px] mx-auto md:ml-auto">
+              <div className="relative overflow-hidden rounded-sm border border-brand/20 bg-[#fdfbf7]" style={{ aspectRatio: "3/2" }}>
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={SLIDES[active].src}
@@ -91,7 +92,7 @@ export function BrandVisualShowcase() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute inset-0 w-full h-full object-contain p-3"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 </AnimatePresence>
               </div>
