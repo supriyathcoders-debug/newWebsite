@@ -7,8 +7,11 @@ import { WHY_GM } from "@/lib/content/home";
 
 export function WhyGmSection() {
   return (
-    <section id="why-gm" className="py-28 section-shell bg-brand-soft/20">
+    <section id="why-gm" className="py-28 section-shell bg-brand-soft/20 relative section-noise">
       <div className="max-w-[1100px] mx-auto">
+        {/* Decorative blob */}
+        <div className="absolute right-0 top-0 w-[400px] h-[400px] blob-purple opacity-20 pointer-events-none" aria-hidden="true" />
+
         <StaggerReveal className="mb-16 max-w-[720px]">
           <StaggerItem>
             <Eyebrow className="mb-5">{WHY_GM.eyebrow}</Eyebrow>
@@ -21,7 +24,7 @@ export function WhyGmSection() {
         <StaggerReveal className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {WHY_GM.points.map((point) => (
             <StaggerItem key={point.number}>
-              <article className="p-8 border border-border bg-surface h-full hover:border-brand/40 transition-colors">
+              <article className="card-glass p-8 h-full group">
                 <span className="font-heading text-[0.75rem] font-bold text-brand/40 tracking-wider mb-3 block">
                   {point.number}
                 </span>

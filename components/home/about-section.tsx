@@ -8,8 +8,11 @@ import { ABOUT, IMAGES } from "@/lib/content/home";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-28 section-shell bg-brand-soft/30">
+    <section id="about" className="py-28 section-shell bg-brand-soft/30 relative section-noise">
       <div className="max-w-[1100px] mx-auto">
+        {/* Decorative blob */}
+        <div className="absolute right-0 top-1/2 w-[400px] h-[400px] blob-gold opacity-20 pointer-events-none" aria-hidden="true" />
+
         {/* Main About content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">
           <StaggerReveal className="order-2 lg:order-1">
@@ -33,8 +36,10 @@ export function AboutSection() {
             <StaggerItem>
               <BrandImage
                 src={IMAGES.agencyProfessionalWoman}
-                alt="Andrea — Founder & CEO of Grateful Marketing"
+                alt="Andrea — Founder &amp; CEO of Grateful Marketing"
                 className="max-w-[480px] mx-auto lg:ml-auto"
+                floating
+                blob
               />
             </StaggerItem>
           </StaggerReveal>
@@ -43,15 +48,16 @@ export function AboutSection() {
         {/* Meet Your Expert — Andrea */}
         <StaggerReveal>
           <StaggerItem>
-            <div className="border border-brand/20 bg-surface p-10 md:p-14 relative overflow-hidden">
+            <div className="card-glass p-10 md:p-14 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-brand/30 via-brand to-brand/30" aria-hidden="true" />
               <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-10 items-start">
                 <div>
                   <BrandImage
                     src={IMAGES.founderStrategicReflection}
-                    alt="Andrea — Founder & CEO of Grateful Marketing"
+                    alt="Andrea — Founder &amp; CEO of Grateful Marketing"
                     className="w-full"
                     aspectRatio="4/5"
+                    frame="glass"
                   />
                 </div>
                 <div>
@@ -64,7 +70,7 @@ export function AboutSection() {
                   <p className="text-[0.93rem] text-muted leading-[1.9] font-light mb-6">
                     {ABOUT.expertEnterprise}
                   </p>
-                  <div className="border-l-4 border-brand pl-5 py-3 bg-brand-soft/30">
+                  <div className="relative pl-5 py-4 bg-gradient-to-r from-brand/5 to-transparent rounded-2xl border-l-4 border-brand">
                     <p className="text-[0.88rem] text-foreground leading-[1.8] font-light italic">
                       &ldquo;{ABOUT.expertCredential}&rdquo;
                     </p>

@@ -5,15 +5,15 @@ import { STATS } from "@/lib/content/home";
 
 export function StatsBar() {
   return (
-    <section className="py-12 section-shell bg-brand-soft/20 border-y border-black/5">
-      <StaggerReveal className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-[1000px] mx-auto">
+    <section className="py-16 section-shell bg-brand-soft/20 relative section-divider-top section-divider-bottom section-noise">
+      <StaggerReveal className="flex flex-row items-stretch justify-center gap-4 max-w-[1000px] mx-auto">
         {STATS.items.map((stat) => (
-          <StaggerItem key={stat.label}>
-            <div className="text-center">
-              <div className="font-heading text-[clamp(2rem,3.5vw,3rem)] font-bold text-brand leading-none mb-2">
+          <StaggerItem key={stat.label} className="flex-1 min-w-0">
+            <div className="card-glass p-4 sm:p-5 text-center group h-full">
+              <div className="font-heading text-[clamp(1.2rem,2.5vw,2rem)] font-bold text-brand leading-none mb-1">
                 {stat.number}
               </div>
-              <div className="text-[0.72rem] text-muted leading-relaxed font-light max-w-[140px] mx-auto">
+              <div className="text-[0.65rem] sm:text-[0.72rem] text-muted leading-relaxed font-light">
                 {stat.label}
               </div>
             </div>

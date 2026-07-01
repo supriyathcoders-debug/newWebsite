@@ -9,8 +9,11 @@ import { INDUSTRIES, IMAGES } from "@/lib/content/home";
 
 export function IndustriesSection() {
   return (
-    <section id="industries" className="py-28 section-shell bg-brand-soft/20">
+    <section id="industries" className="py-28 section-shell bg-brand-soft/20 relative section-noise">
       <div className="max-w-[1200px] mx-auto">
+        {/* Decorative blob */}
+        <div className="absolute left-0 top-1/3 w-[350px] h-[350px] blob-gold opacity-20 pointer-events-none" aria-hidden="true" />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
           <StaggerReveal>
             <StaggerItem>
@@ -34,16 +37,18 @@ export function IndustriesSection() {
                 src={IMAGES.footprintsTurningToLight}
                 alt="Footprints turning to light — transformation through purposeful AI"
                 className="max-w-[480px] mx-auto lg:ml-auto"
+                floating
+                blob
               />
             </StaggerItem>
           </StaggerReveal>
         </div>
 
-        <StaggerReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <StaggerReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {INDUSTRIES.items.map((industry) => (
             <StaggerItem key={industry.title}>
-              <article className="p-7 border border-border-subtle bg-background/40 h-full hover:border-brand/25 transition-colors">
-                <div className="w-10 h-10 flex items-center justify-center border border-brand/25 text-brand mb-4">
+              <article className="card-modern p-7 h-full group">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-brand/15 to-brand/5 flex items-center justify-center text-brand border border-brand/15 mb-4 group-hover:border-brand/30 transition-colors">
                   <PillarIcon name={industry.icon} className="w-4 h-4" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold mb-3">

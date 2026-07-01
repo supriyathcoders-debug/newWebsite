@@ -9,8 +9,11 @@ import { BOOKING_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
-    <section id="problem" className="py-28 section-shell">
+    <section id="problem" className="py-28 section-shell relative section-noise">
       <div className="max-w-[1100px] mx-auto">
+        {/* Decorative blobs */}
+        <div className="absolute top-20 right-0 w-[400px] h-[400px] blob-gold opacity-20 pointer-events-none" aria-hidden="true" />
+
         {/* Intro */}
         <StaggerReveal className="max-w-[780px] mb-20">
           <StaggerItem>
@@ -32,7 +35,7 @@ export function ProblemWeSolveSection() {
         {/* Pull quote */}
         <StaggerReveal className="mb-20">
           <StaggerItem>
-            <blockquote className="border-l-4 border-brand pl-8 py-4 bg-brand-soft/30">
+            <blockquote className="relative pl-8 py-6 bg-gradient-to-r from-brand/5 to-transparent rounded-2xl border-l-4 border-brand">
               <p className="font-heading text-[clamp(1.1rem,1.8vw,1.4rem)] italic text-foreground leading-[1.7]">
                 &ldquo;{PROBLEM.pullQuote}&rdquo;
               </p>
@@ -55,7 +58,7 @@ export function ProblemWeSolveSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {PROBLEM.personas.map((persona) => (
               <StaggerItem key={persona.title}>
-                <article className="p-8 border border-border bg-brand-soft/20 h-full hover:border-brand/40 transition-colors">
+                <article className="card-modern p-8 h-full group">
                   <h4 className="font-heading text-[1.05rem] font-semibold text-foreground mb-4">
                     {persona.title}
                   </h4>
@@ -92,7 +95,7 @@ export function ProblemWeSolveSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {PROBLEM.cracks.map((crack) => (
               <StaggerItem key={crack.number}>
-                <div className="flex gap-5 p-6 border border-border bg-surface hover:border-brand/40 transition-colors">
+                <div className="card-glass flex gap-5 p-6 group">
                   <span className="font-heading text-[1.5rem] font-bold text-brand/30 leading-none shrink-0">
                     {crack.number}
                   </span>
@@ -120,8 +123,10 @@ export function ProblemWeSolveSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {PROBLEM.outcomes.map((outcome, i) => (
               <StaggerItem key={i}>
-                <div className="flex items-start gap-3">
-                  <span className="text-brand mt-0.5 shrink-0">✓</span>
+                <div className="flex items-start gap-3 p-4 rounded-2xl bg-surface/40 hover:bg-surface/60 transition-colors">
+                  <span className="w-6 h-6 rounded-full bg-brand/15 text-brand flex items-center justify-center text-[0.65rem] font-bold shrink-0 mt-0.5">
+                    &#10003;
+                  </span>
                   <p className="text-[0.88rem] text-muted leading-[1.8] font-light">
                     {outcome}
                   </p>
@@ -138,7 +143,7 @@ export function ProblemWeSolveSection() {
               {PROBLEM.ctaLabel}
             </p>
             <div className="flex flex-wrap gap-4">
-              <PremiumButton href={BOOKING_URL} external>
+              <PremiumButton href={BOOKING_URL}>
                 Get Your AI Revenue Audit
               </PremiumButton>
               <PremiumButton href="/pre-booking" variant="secondary">

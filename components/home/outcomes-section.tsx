@@ -6,8 +6,11 @@ import { OUTCOMES } from "@/lib/content/home";
 
 export function OutcomesSection() {
   return (
-    <section id="outcomes" className="py-28 section-shell">
+    <section id="outcomes" className="py-28 section-shell relative section-noise">
       <div className="max-w-[900px] mx-auto">
+        {/* Decorative blob */}
+        <div className="absolute left-1/4 top-1/4 w-[350px] h-[350px] blob-gold opacity-15 pointer-events-none" aria-hidden="true" />
+
         <StaggerReveal>
           <StaggerItem>
             <Eyebrow className="mb-5">{OUTCOMES.eyebrow}</Eyebrow>
@@ -20,8 +23,8 @@ export function OutcomesSection() {
           <div className="space-y-5">
             {OUTCOMES.items.map((item, i) => (
               <StaggerItem key={i}>
-                <div className="flex items-start gap-4 p-6 border border-border bg-surface hover:border-brand/40 transition-colors">
-                  <span className="w-7 h-7 rounded-full bg-brand/10 text-brand flex items-center justify-center text-[0.7rem] font-bold shrink-0 mt-0.5">
+                <div className="card-glass flex items-start gap-4 p-6 group">
+                  <span className="w-8 h-8 rounded-xl bg-gradient-to-br from-brand/20 to-brand/5 text-brand flex items-center justify-center text-[0.7rem] font-bold shrink-0 mt-0.5 border border-brand/15">
                     {i + 1}
                   </span>
                   <p className="text-[0.9rem] text-muted leading-[1.8] font-light">
