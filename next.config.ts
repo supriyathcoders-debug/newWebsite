@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     "192.168.1.5",
     "192.168.1.77",
     "localhost:3000",
-    "fascism-bullseye-perjury.ngrok-free.dev",
+    "*.ngrok-free.dev",
   ],
 };
 

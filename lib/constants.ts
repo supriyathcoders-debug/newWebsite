@@ -1,4 +1,6 @@
-export const BOOKING_URL =
+export const BOOKING_URL = "/pre-booking";
+
+export const EXTERNAL_BOOKING_URL =
   "https://api.growthhub365.com/widget/booking/UCd9cjMN2XGBd1qvKuyS";
 
 /** Client handoff images — paths match README_Developer_Handoff.md */

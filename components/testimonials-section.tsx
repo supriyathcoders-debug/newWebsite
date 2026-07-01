@@ -7,9 +7,8 @@ import TestimonialCard from "@/components/ui/testimonial-card";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { BrandImage } from "@/components/ui/brand-image";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
-import { IMAGES, TESTIMONIALS } from "@/lib/content/home";
+import { TESTIMONIALS } from "@/lib/content/home";
 
 const CATEGORIES = [
   "AI Voice Agents",
@@ -85,19 +84,13 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
       : visible;
 
   return (
-    <section id="testimonials" className="py-28 section-shell bg-brand-soft/20">
+    <section id="testimonials" className="py-28 section-shell bg-brand-soft/20 relative section-noise">
       <div className="max-w-[1200px] mx-auto">
+        {/* Decorative blobs */}
+        <div className="absolute right-0 top-1/4 w-[350px] h-[350px] blob-purple opacity-20 pointer-events-none" aria-hidden="true" />
+
         {!hideHeading && (
           <>
-            <StaggerReveal className="mb-10">
-              <StaggerItem>
-                <BrandImage
-                  src={IMAGES.handsMeetingMinimalist}
-                  alt="The AI partnership — trusted client collaboration"
-                  className="max-w-[900px] mx-auto mb-10"
-                />
-              </StaggerItem>
-            </StaggerReveal>
             <StaggerReveal className="mb-10 max-w-[720px]">
               <StaggerItem>
                 <Eyebrow className="mb-4">{TESTIMONIALS.eyebrow}</Eyebrow>
@@ -123,9 +116,9 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
               role="tab"
               aria-selected={activeCategory === null}
               onClick={() => setActiveCategory(null)}
-              className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
+              className={`text-[0.72rem] tracking-[0.08em] uppercase px-5 py-2.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
                 activeCategory === null
-                  ? "bg-brand text-background border-brand"
+                  ? "bg-brand text-background border-brand shadow-[0_0_20px_rgba(201,168,76,0.2)]"
                   : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
               }`}
             >
@@ -139,9 +132,9 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 onClick={() =>
                   setActiveCategory((s) => (s === c ? null : c))
                 }
-                className={`text-[0.72rem] tracking-[0.08em] uppercase px-4 py-2.5 border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
+                className={`text-[0.72rem] tracking-[0.08em] uppercase px-5 py-2.5 rounded-xl border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand ${
                   activeCategory === c
-                    ? "bg-brand text-background border-brand"
+                    ? "bg-brand text-background border-brand shadow-[0_0_20px_rgba(201,168,76,0.2)]"
                     : "bg-transparent text-muted border-border-subtle hover:border-brand/40 hover:text-brand"
                 }`}
               >
@@ -163,8 +156,8 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
             >
-              {padded.map((t: Testimonial) => (
-                <TestimonialCard key={t.id} item={t} />
+              {padded.map((t: Testimonial, i: number) => (
+                <TestimonialCard key={`${t.id}-${i}`} item={t} />
               ))}
             </motion.div>
           </AnimatePresence>
@@ -177,9 +170,9 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                     key={i}
                     onClick={() => goTo(i)}
                     aria-label={`Go to slide ${i + 1}`}
-                    className={`h-1 transition-all duration-300 ${
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
                       i === currentIndex
-                        ? "w-8 bg-brand"
+                        ? "w-8 bg-brand glow-brand"
                         : "w-4 bg-border-subtle hover:bg-brand/40"
                     }`}
                   />
@@ -190,7 +183,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 <button
                   onClick={prev}
                   aria-label="Previous testimonials"
-                  className="w-11 h-11 border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10"
+                  className="w-11 h-11 rounded-xl border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10 hover:shadow-[0_0_20px_rgba(201,168,76,0.1)]"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="m15 18-6-6 6-6" />
@@ -199,7 +192,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 <button
                   onClick={next}
                   aria-label="Next testimonials"
-                  className="w-11 h-11 border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10"
+                  className="w-11 h-11 rounded-xl border border-border-subtle flex items-center justify-center text-brand transition-all hover:border-brand hover:bg-brand/10 hover:shadow-[0_0_20px_rgba(201,168,76,0.1)]"
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="m9 18 6-6-6-6" />

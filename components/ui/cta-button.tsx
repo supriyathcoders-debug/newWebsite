@@ -9,15 +9,15 @@ type CtaButtonProps = {
 };
 
 export function CtaButton({ href, children, variant = "primary" }: CtaButtonProps) {
-  const baseClasses =
-    "inline-flex items-center justify-center rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5";
   const variantClasses =
     variant === "primary"
-      ? "border-brand bg-brand text-background shadow-[0_12px_28px_rgba(200,169,81,0.28)] hover:bg-brand-dark"
-      : "border-border bg-transparent text-foreground hover:border-brand hover:text-brand";
+      ? "btn-primary"
+      : "btn-secondary";
+
+  const classes = `${variantClasses} text-[0.82rem] px-6 py-3`;
 
   return (
-    <Link href={href} className={`${baseClasses} ${variantClasses}`}>
+    <Link href={href} className={classes}>
       {children}
     </Link>
   );

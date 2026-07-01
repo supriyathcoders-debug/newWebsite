@@ -9,8 +9,11 @@ import { IMAGES, PLATFORM } from "@/lib/content/home";
 
 export function AiPlatformSection() {
   return (
-    <section id="platform" className="py-28 section-shell">
+    <section id="platform" className="py-28 section-shell relative section-noise">
       <div className="max-w-[1200px] mx-auto">
+        {/* Decorative blob */}
+        <div className="absolute left-0 top-1/3 w-[400px] h-[400px] blob-purple opacity-20 pointer-events-none" aria-hidden="true" />
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-12">
           <StaggerReveal>
             <StaggerItem>
@@ -33,16 +36,18 @@ export function AiPlatformSection() {
                 src={IMAGES.aiPlatformDataConfidence}
                 alt="Data-driven confidence — Grateful Marketing AI platform"
                 className="max-w-[520px] mx-auto lg:ml-auto"
+                floating
+                blob
               />
             </StaggerItem>
           </StaggerReveal>
         </div>
 
-        <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <StaggerReveal className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {PLATFORM.features.map((feature) => (
             <StaggerItem key={feature.title}>
-              <article className="p-7 border border-border-subtle bg-brand-soft/30 h-full">
-                <div className="w-10 h-10 flex items-center justify-center border border-brand/25 text-brand mb-4">
+              <article className="card-modern p-7 h-full group">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-brand/15 to-brand/5 flex items-center justify-center text-brand border border-brand/15 mb-4 group-hover:border-brand/30 transition-colors">
                   <PillarIcon name={feature.icon} className="w-4 h-4" />
                 </div>
                 <h3 className="text-sm font-semibold mb-2">{feature.title}</h3>
