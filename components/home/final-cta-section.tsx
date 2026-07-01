@@ -9,7 +9,7 @@ import { FINAL_CTA, IMAGES } from "@/lib/content/home";
 export function FinalCtaSection() {
   return (
     <section id="consultation" className="py-28 section-shell bg-brand-soft/30">
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         <StaggerReveal>
           <StaggerItem>
             <p className="text-sm tracking-[0.12em] uppercase text-brand mb-5 font-light">

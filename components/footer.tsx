@@ -16,9 +16,8 @@ export function Footer() {
             Innovating · Creating · Leading
           </div>
           <p className="text-sm text-muted leading-[1.82] font-light max-w-[325px]">
-            Premium human-first AI consultancy serving legal, financial, insurance, B2B, and service-based businesses through the proprietary GRATITUDE™ methodology.
+            North American digital marketing consultancy serving legal, financial, insurance, B2B, D2C, and service-based organizations — through the human-first, globally trademarked Gratitude™ methodology.
           </p>
-          {/* GM Icon removed since main logo includes branding */}
         </div>
 
         <div>
@@ -36,7 +35,12 @@ export function Footer() {
             </li>
             <li>
               <Link href="/#services" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                AI Team Training
+                AI Team Training & Empowerment
+              </Link>
+            </li>
+            <li>
+              <Link href="/#voice-agents" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+                AI Voice Agents
               </Link>
             </li>
           </ul>
@@ -57,22 +61,13 @@ export function Footer() {
         <div>
            <h4 className="text-[0.64rem] tracking-[0.2em] uppercase text-brand mb-5 font-normal">Connect</h4>
            <ul className="list-none space-y-2.5">
-             <li><a href="#" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">LinkedIn</a></li>
-             <li><a href="#" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Instagram</a></li>
-             <li><a href="#" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">Facebook</a></li>
-             <li>
-               <a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                 client-services@grateful-marketing.com
-               </a>
-             </li>
-             <li>
-               <a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
-                 +1 (226) 332-9712
-               </a>
-             </li>
-             <li>
-               <span className="text-[0.79rem] text-muted font-light">North America 🌎</span>
-             </li>
+             <li><a href="mailto:client-services@grateful-marketing.com" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+               client-services@grateful-marketing.com
+             </a></li>
+             <li><a href="tel:+12263329712" className="text-[0.79rem] text-muted no-underline font-light transition-colors hover:text-brand">
+               +1 (226) 332-9712
+             </a></li>
+             <li><span className="text-[0.79rem] text-muted font-light">North America</span></li>
            </ul>
         </div>
       </div>

@@ -25,11 +25,6 @@ export function TestimonialCard({ item }: Props) {
         <div className="text-[0.72rem] text-muted mt-0.5 font-light">
           {item.title}
         </div>
-        {item.industry && (
-          <div className="text-[0.65rem] text-brand/70 mt-2 tracking-[0.08em] uppercase font-light">
-            {item.industry}
-          </div>
-        )}
       </div>
     </article>
   );

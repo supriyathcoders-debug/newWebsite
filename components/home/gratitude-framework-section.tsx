@@ -11,7 +11,7 @@ export function GratitudeFrameworkSection() {
   return (
     <section id="gratitude" className="py-28 section-shell">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start mb-16">
           <StaggerReveal>
             <StaggerItem>
               <BrandImage
@@ -35,6 +35,34 @@ export function GratitudeFrameworkSection() {
             </StaggerItem>
           </StaggerReveal>
         </div>
+
+        {/* Pain to Purpose personal story */}
+        <StaggerReveal className="max-w-[900px] mx-auto mb-16">
+          <StaggerItem>
+            <div className="p-10 border border-brand/20 bg-surface relative">
+              <div className="absolute top-0 left-0 w-20 h-0.5 bg-gradient-to-r from-brand to-transparent" aria-hidden="true" />
+              <div className="flex gap-6 items-start">
+                <span className="font-heading text-5xl text-brand/20 leading-none select-none shrink-0" aria-hidden="true">
+                  &ldquo;
+                </span>
+                <div>
+                  <p className="text-[0.95rem] text-muted leading-[1.85] font-light italic">
+                    {GRATITUDE.personalStory}
+                  </p>
+                  <div className="mt-5 flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center text-brand text-sm font-bold">
+                      A
+                    </div>
+                    <div>
+                      <div className="text-[0.8rem] font-semibold text-foreground">Andrea</div>
+                      <div className="text-[0.68rem] text-muted font-light">Founder & CEO, Grateful Marketing™</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </StaggerItem>
+        </StaggerReveal>
 
         <StaggerReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {GRATITUDE_PILLARS.map((pillar) => (

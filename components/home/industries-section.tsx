@@ -11,7 +11,7 @@ export function IndustriesSection() {
   return (
     <section id="industries" className="py-28 section-shell bg-brand-soft/20">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-16">
           <StaggerReveal>
             <StaggerItem>
               <Eyebrow className="mb-5">{INDUSTRIES.eyebrow}</Eyebrow>

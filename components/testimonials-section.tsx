@@ -94,7 +94,7 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
                 <BrandImage
                   src={IMAGES.handsMeetingMinimalist}
                   alt="The AI partnership — trusted client collaboration"
-                  className="max-w-[900px] mx-auto mb-10"
+                  className="max-w-[900px] mb-10"
                 />
               </StaggerItem>
             </StaggerReveal>
@@ -163,8 +163,8 @@ export function TestimonialsSection({ hideHeading, categoryFilter }: Props) {
               transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"
             >
-              {padded.map((t: Testimonial) => (
-                <TestimonialCard key={t.id} item={t} />
+              {padded.map((t: Testimonial, i: number) => (
+                <TestimonialCard key={`${t.id}-${i}`} item={t} />
               ))}
             </motion.div>
           </AnimatePresence>

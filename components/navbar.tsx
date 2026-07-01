@@ -8,10 +8,10 @@ const navItems = [
   { href: "/#gratitude", label: "GRATITUDE" },
   { href: "/#about", label: "About" },
   { href: "/#services", label: "Services" },
-  { href: "/#testimonials", label: "Testimonials" },
   { href: "/#industries", label: "Industries" },
   { href: "/#platform", label: "Platform" },
   { href: "/ai-voice-agents", label: "Voice Agents" },
+  { href: "/#testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
 ];
 

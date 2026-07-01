@@ -19,9 +19,11 @@ export function HeroSection() {
           alt=""
           className="absolute inset-0 h-full w-full object-contain object-center sm:object-cover sm:object-[60%_center] lg:object-[68%_center]"
         />
-        {/* Left: text readability · lighter on mobile so background logo stays visible */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/88 via-[#23004c]/55 to-transparent sm:from-[#23004c]/96 sm:via-[#23004c]/72 sm:to-[#23004c]/15 lg:via-[#23004c]/45 lg:to-[#23004c]/5" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/70 via-transparent to-[#23004c]/20 sm:from-[#23004c]/75 sm:to-[#23004c]/35" />
+        {/* Blur overlay on left side for readability */}
+        <div className="absolute left-0 top-0 bottom-0 w-[40%] sm:w-[35%] lg:w-[30%] backdrop-blur-[4px]" aria-hidden="true" />
+        {/* Left: text readability gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#23004c]/95 via-[#23004c]/75 to-transparent sm:from-[#23004c]/96 sm:via-[#23004c]/82 sm:to-[#23004c]/30 lg:via-[#23004c]/65 lg:to-[#23004c]/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#23004c]/75 via-[#23004c]/10 to-[#23004c]/25 sm:from-[#23004c]/80 sm:to-[#23004c]/40" />
       </div>
 
       <div className="relative z-10 w-full section-shell pt-28 pb-24 lg:pt-32 lg:pb-28">
