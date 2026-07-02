@@ -5,8 +5,41 @@ import { motion, AnimatePresence } from "framer-motion";
 import { BrandImage } from "@/components/ui/brand-image";
 import { Eyebrow } from "@/components/ui/eyebrow";
 import { PremiumButton } from "@/components/ui/premium-button";
+import { Marquee } from "@/components/ui/marquee";
 import { StaggerReveal, StaggerItem } from "@/components/ui/stagger-reveal";
 import { SERVICES } from "@/lib/content/home";
+
+const PILLAR_MARQUEE_ITEMS = [
+  { name: "Time", icon: "⏱", desc: "Respect every second" },
+  { name: "Gratitude", icon: "🙏", desc: "Lead with appreciation" },
+  { name: "Innovation", icon: "💡", desc: "Reimagine what's possible" },
+  { name: "Productivity", icon: "⚡", desc: "Do more with less" },
+  { name: "Potential", icon: "🚀", desc: "Unlock what's next" },
+] as const;
+
+const MARQUEE_PILLARS = [
+  ...PILLAR_MARQUEE_ITEMS,
+  ...PILLAR_MARQUEE_ITEMS,
+  ...PILLAR_MARQUEE_ITEMS,
+];
+
+function PillarMarqueeCard({
+  name,
+  icon,
+  desc,
+}: (typeof PILLAR_MARQUEE_ITEMS)[number]) {
+  return (
+    <div className="w-[190px] shrink-0 rounded-2xl border border-brand/15 bg-gradient-to-b from-surface/80 to-surface/40 p-5 text-center transition-colors hover:border-brand/35">
+      <div className="mb-2 text-2xl">{icon}</div>
+      <div className="mb-1 font-heading text-[0.75rem] font-semibold text-brand">
+        {name}
+      </div>
+      <div className="text-[0.62rem] font-light leading-relaxed text-muted/70">
+        {desc}
+      </div>
+    </div>
+  );
+}
 
 export function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,50 +110,27 @@ export function ServicesSection() {
           </StaggerItem>
         </StaggerReveal>
 
-        {/* Five Pillars graphic placeholder */}
-        <StaggerReveal className="mb-16">
+        {/* Five Pillars — scrolling promotional bar */}
+        <StaggerReveal className="mb-6 max-w-[720px]">
           <StaggerItem>
-            <div className="card-glass p-8 max-w-[800px]">
-              <p className="text-[0.8rem] text-muted font-light mb-4">
-                The 5 Pillars of Gratitude&#8482; — Approved Reference Visual
-              </p>
-              <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4">
-                {[
-                  { name: "Time", icon: "⏱", desc: "Respect every second" },
-                  { name: "Gratitude", icon: "🙏", desc: "Lead with appreciation" },
-                  { name: "Innovation", icon: "💡", desc: "Reimagine what's possible" },
-                  { name: "Productivity", icon: "⚡", desc: "Do more with less" },
-                  { name: "Potential", icon: "🚀", desc: "Unlock what's next" },
-                ].map((pillar, i) => (
-                  <motion.div
-                    key={pillar.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.1, duration: 0.4, ease: "easeOut" }}
-                    whileHover={{ y: -6, scale: 1.04 }}
-                    className="group relative"
-                  >
-                    <div className="relative p-4 sm:p-5 rounded-2xl bg-gradient-to-b from-surface/80 to-surface/40 border border-brand/15 text-center overflow-hidden transition-shadow duration-300 group-hover:border-brand/40 group-hover:shadow-[0_0_25px_-5px_rgba(212,175,55,0.25)]">
-                      <div className="absolute inset-0 bg-gradient-to-b from-brand/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="relative">
-                        <div className="text-xl sm:text-2xl mb-2">{pillar.icon}</div>
-                        <div className="font-heading text-[0.65rem] sm:text-[0.75rem] font-semibold text-brand mb-1">
-                          {pillar.name}
-                        </div>
-                        <div className="text-[0.55rem] sm:text-[0.6rem] text-muted/60 font-light leading-relaxed hidden sm:block">
-                          {pillar.desc}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              <p className="text-[0.65rem] text-muted/60 mt-4 font-light">
-                &#9888;&#65039; Client asset required: Replace with day_5.png from Developer Handoff package
-              </p>
-            </div>
+            <p className="text-[0.8rem] font-light text-muted">
+              The 5 Pillars of Gratitude&#8482; — Approved Reference Visual
+            </p>
           </StaggerItem>
         </StaggerReveal>
+
+        <div className="relative left-1/2 mb-16 w-screen max-w-none -translate-x-1/2">
+          <div className="border-y border-brand/10 bg-brand-soft/25 py-5 section-noise">
+            <Marquee speed={38}>
+              {MARQUEE_PILLARS.map((pillar, index) => (
+                <PillarMarqueeCard key={`${pillar.name}-${index}`} {...pillar} />
+              ))}
+            </Marquee>
+          </div>
+          <p className="section-shell mt-3 text-[0.65rem] font-light text-muted/60">
+            &#9888;&#65039; Client asset required: Replace with day_5.png from Developer Handoff package
+          </p>
+        </div>
 
         {/* Carousel */}
         <div className="relative">

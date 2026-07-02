@@ -9,13 +9,13 @@ import { BOOKING_URL } from "@/lib/constants";
 
 export function ProblemWeSolveSection() {
   return (
-    <section id="problem" className="py-28 section-shell relative section-noise">
-      <div className="max-w-[1100px] mx-auto">
+    <section id="problem" className="pt-14 pb-28 section-shell relative section-noise">
+      <div className="max-w-[1100px] mx-auto relative z-10">
         {/* Decorative blobs */}
         <div className="absolute top-20 right-0 w-[400px] h-[400px] blob-gold opacity-20 pointer-events-none" aria-hidden="true" />
 
         {/* Intro */}
-        <StaggerReveal className="max-w-[780px] mb-20">
+        <StaggerReveal className="max-w-[720px] mb-20">
           <StaggerItem>
             <Eyebrow className="mb-5">{PROBLEM.eyebrow}</Eyebrow>
           </StaggerItem>
@@ -72,7 +72,7 @@ export function ProblemWeSolveSection() {
         </StaggerReveal>
 
         {/* Insight */}
-        <StaggerReveal className="mb-20 max-w-[780px]">
+        <StaggerReveal className="mb-20 max-w-[720px]">
           <StaggerItem>
             <p className="text-base text-foreground leading-[1.88] font-medium">
               {PROBLEM.insight}

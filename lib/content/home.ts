@@ -18,7 +18,7 @@ export const STATS = {
     { number: "25+", label: "Years partnering with real businesses" },
     { number: "∞", label: "People served with intention" },
     { number: "5", label: "Pillars of Gratitude™" },
-    { number: "🌍", label: "Globally trademarked methodology" },
+    { number: "™", label: "Globally trademarked methodology" },
   ],
 } as const;
 
